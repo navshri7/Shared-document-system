@@ -1,0 +1,28 @@
+
+#ifndef ERRORS_H
+#define ERRORS_H
+
+typedef enum {
+    ERR_SUCCESS = 0,
+    ERR_FILE_NOT_FOUND = 1,
+    ERR_FILE_EXISTS = 2,
+    ERR_ACCESS_DENIED = 3,
+    ERR_INVALID_SENTENCE = 4,
+    ERR_INVALID_WORD_INDEX = 5,
+    ERR_SENTENCE_LOCKED = 6,
+    ERR_SS_UNAVAILABLE = 7,
+    ERR_INVALID_COMMAND = 8,
+    ERR_CONNECTION_FAILED = 9,
+    ERR_INTERNAL = 10,
+    ERR_NOT_OWNER = 11,
+    ERR_NETWORK_ERROR = 12,
+    ERR_TIMEOUT = 13,
+    ERR_FILE_IN_USE = 14,
+    ERR_INVALID_PARAMS = 15,
+    ERR_QUOTA_EXCEEDED = 16,
+    ERR_CORRUPTED_DATA = 17
+} ErrorCode;
+
+const char* error_to_string(ErrorCode code);
+
+#endif // ERRORS_H
